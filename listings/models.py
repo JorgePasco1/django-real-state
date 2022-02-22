@@ -29,5 +29,5 @@ class Listing(models.Model):
     list_date = models.DateTimeField(default=datetime.utcnow, blank=True)
 
     def __str__(self):
-        return f"Listing<{self.id}>: {self.tile}"
+        return self.title
 
