@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% block title %} | Register Account{% endblock %}
+
 <section id="register" class="bg-light py-5">
     <div class="container">
         <div class="row">
@@ -13,6 +15,8 @@
                         </h4>
                     </div>
                     <div class="card-body">
+                        <!-- Alerts -->
+                        {% include 'partials/_alerts.html' %}
                         <form action="{% url 'register' %}" method="POST" >
                             {% csrf_token %}
                             <div class="form-group">

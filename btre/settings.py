@@ -15,6 +15,8 @@ from pathlib import Path
 
 import environ
 
+from django.contrib.messages import constants as messages
+
 env = environ.Env()
 environ.Env.read_env()
 
@@ -143,3 +145,8 @@ MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
